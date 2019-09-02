@@ -1,0 +1,9 @@
+{
+  "name": "websocket-client-examples",
+  "version": "0.1.0",
+  "description": "Web Socket clients to display a reboot message triggered by a boolean flag on a specific file on the server",
+  "author": "Ezequiel Streitenberger <streitenberger.ezequiel@gmail.com>",
+  "dependencies": {
+    "socket.io-client": "^2.2.0"
+  }
+}

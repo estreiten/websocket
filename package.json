@@ -1,0 +1,10 @@
+{
+  "name": "websocket",
+  "version": "0.1.0",
+  "description": "Web Socket to display a reboot message triggered by a boolean flag on a specific file",
+  "main": "server.js",
+  "author": "Ezequiel Streitenberger <streitenberger.ezequiel@gmail.com>",
+  "dependencies": {
+    "socket.io": "^2.2.0"
+  }
+}

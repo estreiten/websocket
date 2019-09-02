@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script src="socket.io-client/socket.io.js"></script>
+    <script>
+      var socket = io('http://localhost:3000');
+      socket.on('reboot', function (data) {
+        console.log(data)
+      });
+    </script>
+  </body>
+</html>
