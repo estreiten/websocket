@@ -12,9 +12,9 @@ fs.watch(path, () => {
   fs.readFile(path, {encoding: 'utf-8'}, (err, data) => {
     try {
       if (err) throw err;
-      if (data === 'true') {
+      if (data === 'free') {
         socket.emit('reboot', { seconds: config.seconds });
-        fs.writeFile(path, 'false', 'utf8', () => {})
+        fs.writeFile(path, 'waiting', 'utf8', () => {})
       }
     } catch(err) {
       console.error(err)
