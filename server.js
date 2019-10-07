@@ -12,7 +12,7 @@ if (config.https) {
   }
 }
 
-const server = http.createServer(config.https ? httpsOptions : {});
+const server = http.createServer(config.https ? httpsOptions : null);
 const socket = io(server);
 server.listen(config.port);
 
