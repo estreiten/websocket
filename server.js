@@ -1,10 +1,18 @@
 const fs = require('fs')
-const http = require('http')
+const protocol = config.https ? 'https' : 'http'
+const http = require(protocol)
 const io = require('socket.io')
 const config = require('./config')
 const path = config.filePath
 
-const server = http.createServer();
+if (config.https) {
+  const httpsOptions = {
+    key: fs.readFileSync(config.https.keyFile),
+    cert: fs.readFileSync(config.https.certFile)
+  }
+}
+
+const server = http.createServer(config.https ? httpsOptions : {});
 const socket = io(server);
 server.listen(config.port);
 
