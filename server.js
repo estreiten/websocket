@@ -1,8 +1,8 @@
+const config = require('./config')
 const fs = require('fs')
 const protocol = config.https ? 'https' : 'http'
 const http = require(protocol)
 const io = require('socket.io')
-const config = require('./config')
 const path = config.filePath
 
 if (config.https) {
