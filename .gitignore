@@ -1,2 +1,4 @@
 node_modules
 config.js
+server_key.pem
+server_cert.pem
