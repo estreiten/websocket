@@ -6,8 +6,9 @@ const io = require('socket.io')
 const path = config.filePath
 
 const options = config.https ? {
-  key: fs.readFileSync(config.https.keyFile),
-  cert: fs.readFileSync(config.https.certFile)
+  /*key: fs.readFileSync(config.https.keyFile),
+  cert: fs.readFileSync(config.https.certFile)*/
+  pfx: fs.readFileSync(config.https.certFile)
 } : null
 
 const server = http.createServer(options);

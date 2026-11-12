@@ -1,0 +1,17 @@
+<service>
+  <id>agsites-websocket</id>
+  <name>AGSites Web Socket</name>
+  <description>Reboot signal via web socket</description>
+  <executable>C:\Program Files\nodejs\node.exe</executable>
+  <arguments>--openssl-legacy-provider server.js</arguments>
+  <workingdirectory>F:\agsites-websocket</workingdirectory>
+  <env name="NODE_ENV" value="production"/>
+  <startmode>Automatic</startmode>
+  <onfailure action="restart" delay="10 sec"/>
+  <onfailure action="restart" delay="30 sec"/>
+  <resetfailure>1 hour</resetfailure>
+  <log mode="roll-by-size">
+    <sizeThreshold>10240</sizeThreshold>
+    <keepFiles>8</keepFiles>
+  </log>
+</service>
