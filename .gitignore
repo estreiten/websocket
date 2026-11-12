@@ -1,4 +1,8 @@
 node_modules
+npm-debug.log
+
 config.js
-server_key.pem
-server_cert.pem
+server_cert.pfx
+reboot.txt
+agsites-websocket.exe
+agsites-websocket.*.log
